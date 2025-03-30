@@ -36,7 +36,7 @@ my_insert_stmt = """ insert into smoothies.public.orders(ingredients, name_on_or
             values ('""" + ingredients_string + """','""" + name_on_order + """')"""
 
 st.write(my_insert_stmt)
-#st.stop()
+st.stop()
 
 if ingredients_string:
     session.sql(my_insert_stmt).collect()
